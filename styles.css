@@ -65,7 +65,7 @@ body, html {
 }
 
 .large-text {
-    font-size: 6vw; /* Responsive font size based on viewport width */
+    font-size: 74px;
     color: white;
     margin: 0; /* Remove margin to compress the text vertically */
     font-weight: bold; /* Make the font bold */
@@ -73,7 +73,7 @@ body, html {
 }
 
 .gift-link {
-    font-size: 4vw; /* Responsive font size based on viewport width */
+    font-size: 74px;
     color: white;
     text-decoration: underline;
     display: block;
@@ -84,4 +84,15 @@ body, html {
     max-width: 100%;
     height: auto;
     margin-top: 20px; /* Adjust spacing as needed */
+}
+
+/* Media Query for Responsive Font Size */
+@media screen and (max-width: 768px) {
+    .gift-large-text {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+    }
+    
+    .gift-link {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
 }
