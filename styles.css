@@ -65,21 +65,20 @@ body, html {
 }
 
 .large-text {
-    font-size: 74px;
+    font-size: 6vw; /* Responsive font size based on viewport width */
     color: white;
     margin: 0; /* Remove margin to compress the text vertically */
     font-weight: bold; /* Make the font bold */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .gift-link {
-    font-size: 74px;
+    font-size: 4vw; /* Responsive font size based on viewport width */
     color: white;
     text-decoration: underline;
     display: block;
     margin-top: 20px;
 }
-
-/* Specific styles for gift.html */
 
 .gift-image {
     max-width: 100%;
