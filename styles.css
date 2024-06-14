@@ -42,7 +42,26 @@ body, html {
     height: 100%;
 }
 
-.center-box {
+.index-center-box {
+    background-color: #2588cf;
+    border: 2mm solid white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    width: auto; /* Allow box to expand based on content */
+    max-width: 50vh; /* Set a maximum width */
+    min-width: 50vh; /* Set a minimum width to maintain square shape */
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 50vh; /* Set a minimum height to maintain square shape */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gift-center-box {
     background-color: #2588cf;
     border: 2mm solid white;
     padding: 20px;
@@ -50,6 +69,7 @@ body, html {
     position: relative;
     z-index: 1;
     max-width: 80%; /* Set a maximum width */
+    width: auto; /* Adjust width as needed */
     height: auto; /* Allow the height to adjust based on content */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     display: flex;
@@ -73,7 +93,7 @@ body, html {
 }
 
 .gift-link {
-    font-size: 74px;
+    font-size: 60px;
     color: white;
     text-decoration: underline;
     display: block;
