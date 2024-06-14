@@ -13,6 +13,7 @@
     font-style: normal;
 }
 
+/* General styles for both pages */
 body, html {
     margin: 0;
     padding: 0;
@@ -23,7 +24,7 @@ body, html {
 .background {
     background-color: #2588cf;
     width: 100%;
-    height: 100%;
+    min-height: 100vh; /* Ensure background covers viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +43,7 @@ body, html {
     height: 100%;
 }
 
+/* Styles specific to index.html */
 .index-center-box {
     background-color: #2588cf;
     border: 2mm solid white;
@@ -49,11 +51,10 @@ body, html {
     text-align: center;
     position: relative;
     z-index: 1;
-    width: auto; /* Allow box to expand based on content */
-    max-width: 50vh; /* Set a maximum width */
-    min-width: 50vh; /* Set a minimum width to maintain square shape */
+    width: 80%; /* Adjust width for better mobile display */
+    max-width: 600px; /* Set a maximum width */
+    min-width: 300px; /* Set a minimum width to maintain box shape */
     height: auto; /* Allow height to adjust based on content */
-    min-height: 50vh; /* Set a minimum height to maintain square shape */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     display: flex;
     flex-direction: column;
@@ -61,6 +62,29 @@ body, html {
     align-items: center;
 }
 
+.index-center-box .small-text {
+    font-size: 17px;
+    color: #facd87;
+    margin: 0; /* Remove default margin */
+}
+
+.index-center-box .large-text {
+    font-size: 8vw; /* Adjust font size for larger screens */
+    color: white;
+    margin: 0; /* Remove margin to compress the text vertically */
+    font-weight: bold; /* Make the font bold */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.index-center-box .gift-link {
+    font-size: 4vw; /* Adjust font size for larger screens */
+    color: white;
+    text-decoration: underline;
+    display: block;
+    margin-top: 20px;
+}
+
+/* Styles specific to gift.html */
 .gift-center-box {
     background-color: #2588cf;
     border: 2mm solid white;
@@ -68,8 +92,8 @@ body, html {
     text-align: center;
     position: relative;
     z-index: 1;
-    max-width: 80%; /* Set a maximum width */
-    width: auto; /* Adjust width as needed */
+    width: 70vw; /* Adjust width for better mobile display */
+    max-width: 600px; /* Set a maximum width */
     height: auto; /* Allow the height to adjust based on content */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     display: flex;
@@ -78,41 +102,46 @@ body, html {
     align-items: center;
 }
 
-.small-text {
-    font-size: 17px;
-    color: #facd87;
-    margin: 0; /* Remove default margin */
-}
-
-.large-text {
-    font-size: 74px;
+.gift-center-box .large-text {
+    font-size: 4vw; /* Adjust font size for larger screens */
     color: white;
     margin: 0; /* Remove margin to compress the text vertically */
     font-weight: bold; /* Make the font bold */
     white-space: nowrap; /* Prevent text wrapping */
 }
 
-.gift-link {
-    font-size: 60px;
+.gift-center-box .gift-link {
+    font-size: 2.5vw; /* Adjust font size for larger screens */
     color: white;
     text-decoration: underline;
     display: block;
     margin-top: 20px;
 }
 
-.gift-image {
-    max-width: 100%;
+.gift-center-box .gift-image {
+    width: 60vw; /* Adjust image width relative to its container */
+    max-width: 600px; /* Set a maximum width */
     height: auto;
     margin-top: 20px; /* Adjust spacing as needed */
 }
 
 /* Media Query for Responsive Font Size */
 @media screen and (max-width: 768px) {
-    .gift-large-text {
-        font-size: 6vw; /* Adjust font size for smaller screens */
+    /* Styles for index.html */
+    .index-center-box .large-text {
+        font-size: 10vw; /* Adjust font size for smaller screens */
     }
     
-    .gift-link {
+    .index-center-box .gift-link {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+    }
+
+    /* Styles for gift.html */
+    .gift-center-box .large-text {
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+
+    .gift-center-box .gift-link {
         font-size: 4vw; /* Adjust font size for smaller screens */
     }
 }
